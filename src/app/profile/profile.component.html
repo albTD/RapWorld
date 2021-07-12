@@ -1,0 +1,111 @@
+<div  >
+    <div class="maindiv">
+        
+        <div class="imgdiv">
+          <div class="imgcircle">
+             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/768px-User_icon_2.svg.png" class="imgphoto" alt="ProfilePhoto">
+          </div>
+        </div>
+
+        <div style="text-align: center;padding-left: 10%;padding-right: 10%;">
+            <p class="namediv">{{users[0].name}}</p>
+            <button  class="biobtn" type="button" (click)="biodata()">Edit Bio</button>
+            <app-bio *ngIf="value"></app-bio>
+        </div>
+
+        <div class="row">
+<div class="col-4">
+
+    <div class="card" style="width: 100%;margin-top: 20px;" *ngFor="let user of users">
+        <div class="card-body ">
+          <h5 class="card-title" style="font-weight: bolder;">Intro</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Username:&nbsp;&nbsp; </h6>
+          <p class="card-text"  style="font-weight:bolder;">{{user.username}}</p>
+          
+          <h6 class="card-subtitle mb-2 text-muted" >Bio:&nbsp;&nbsp; </h6>
+          <p class="card-text" style="font-weight:bolder;">{{user.bio}}</p>
+         
+          <h6 class="card-subtitle mb-2 text-muted" >Email:&nbsp;&nbsp; </h6>
+          <p class="card-text" style="font-weight:bolder;">{{user.email}}</p>
+        
+          <div class="row">
+            <div class="col-10">
+              <h6 class="card-subtitle mb-2 text-muted" >Mobileno:&nbsp;&nbsp; </h6>
+              <p class="card-text" style="font-weight:bolder;">{{user.mobileno}}</p>
+            </div>
+            <div class="col">
+              <i class="fas fa-edit" style="color: cornflowerblue;" [routerLink]="['number']"></i>
+            </div>
+          </div>
+         <br>
+          
+         <div class="row">
+          <div class="col-10">
+            <h6 class="card-subtitle mb-2 text-muted" >Address:&nbsp;&nbsp; </h6>
+            <p class="card-text" style="font-weight:bolder;">{{user.address}}</p>
+          </div>
+          <div class="col">
+            <i class="fas fa-edit" style="color: cornflowerblue;" [routerLink]="['address']"></i>
+          </div>
+        </div>
+
+        
+        <!-- <br> -->
+          <!-- <a class="card-link">Edit details.</a> -->
+
+        </div>
+      </div>
+    
+</div>
+<div class="col-8">
+
+    <div class="card mb-3" style="width: 100%;margin-top: 20px;" *ngFor="let post of posts">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img style="height: 100%;width: 100%;" src={{post.imagePath}} alt="Post Image">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body" >
+
+                <div *ngFor="let user of users">
+                    <div class="row" *ngIf="post.username===user.username">
+
+                        <div  class="col-1">
+                            <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/768px-User_icon_2.svg.png" alt="Avatar" class="avatar">
+                        </div>
+                        <div style="margin-left: 25px;" class="col-10">
+
+                        <h5 class="card-title">{{user.name}}</h5>
+                        <p style="position: relative;bottom:15px;" class="card-text"><small class="text-muted">{{post.date}}</small></p>
+                    
+                        </div>
+
+                    </div>
+                    
+                    <p class="card-text"  *ngIf="post.username===user.username">{{post.description}}</p>
+                    <p class="card-text" *ngIf="post.username===user.username">Link to the track:<a style="margin-left: 10px;" href={{post.videoPath}}>Click here</a></p>
+                
+                </div>
+                <hr class="my-4">
+                <div class="row">
+<!-- <div class="col">
+    <button class="btn like" type="button" style="font-size: small;width:100%;height: 30px;font-weight: bolder;"><img style="height:17px;margin-right: 5px;" src="https://img.icons8.com/metro/26/000000/visible.png"/>View profile</button>
+</div> -->
+<div class="col">
+    <button class="btn like" type="button" style="font-size: small;width:100%;height: 30px;font-weight: bolder;" [routerLink]="['/comments',username,post._id]"><img style="height:17px;margin-right: 5px;" src="https://img.icons8.com/windows/32/000000/topic--v1.png"/>Comment</button>
+</div>
+                </div>
+           
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+        </div>
+
+
+
+
+    </div>
+</div>

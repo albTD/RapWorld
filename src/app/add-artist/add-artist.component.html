@@ -1,0 +1,176 @@
+<div >
+    <div>
+      <form [formGroup]="artistForm" (ngSubmit)="onSubmit()">
+       
+  
+        <div >
+          <div >
+            <div class="form-group">
+              <label for="imagePath">Image URL</label>
+              <input
+                type="text"
+                id="imagePath"
+                formControlName="imagePath"
+                class="form-control"
+                #imagePath
+                autocomplete="off">
+                <span class="help-block" *ngIf="!artistForm.get('imagePath').valid && artistForm.get('imagePath').touched">
+                  Image URL is required.
+                </span> 
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <img [src]="imagePath.value" class="img-responsive">
+          </div>
+        </div>
+  
+        <div>
+            <div>
+              <div class="form-group">
+                <label>Name</label>
+                <input
+                  type="text"
+                  formControlName="name"
+                  class="form-control"
+                  autocomplete="off">
+                  <span class="help-block" *ngIf="!artistForm.get('name').valid && artistForm.get('name').touched">
+                    Name is required.
+                   </span> 
+              </div>
+            </div>
+          </div>
+  
+
+
+        <div>
+          <div>
+            <div class="form-group">
+              <label>Place</label>
+              <input
+                type="text"
+                formControlName="place"
+                class="form-control"
+                autocomplete="off">
+                <span class="help-block" *ngIf="!artistForm.get('place').valid && artistForm.get('place').touched">
+                  Place is required.
+                 </span> 
+            </div>
+          </div>
+        </div>
+
+        <div>
+            <div>
+              <div class="form-group">
+                <label>Label/Independent</label>
+                <input
+                  type="text"
+                  formControlName="label"
+                  class="form-control"
+                  autocomplete="off">
+                  <span class="help-block" *ngIf="!artistForm.get('label').valid && artistForm.get('label').touched">
+                    This field is required.
+                   </span> 
+              </div>
+            </div>
+          </div>
+    
+        
+        <div>
+          <div>
+            <div class="form-group">
+              <label>About</label>
+              <textarea
+              autocomplete="off"
+                type="text"
+                class="form-control"
+                formControlName="about"
+                rows="6"></textarea>
+  
+              <span class="help-block" *ngIf="!artistForm.get('about').valid && artistForm.get('about').touched">
+                  About is required.
+              </span> 
+            </div>
+          </div>
+        </div>
+
+        <div>
+            <div>
+              <div class="form-group">
+                <label>Beef</label>
+                <input
+                  type="text"
+                  formControlName="beef"
+                  class="form-control"
+                  autocomplete="off">
+                  <span class="help-block" *ngIf="!artistForm.get('beef').valid && artistForm.get('beef').touched">
+                    This field is required.
+                   </span> 
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <div class="form-group">
+                <label>Instagram</label>
+                <input
+                  type="text"
+                  formControlName="instagram"
+                  class="form-control"
+                  autocomplete="off">
+                
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <div class="form-group">
+                <label>Facebook</label>
+                <input
+                  type="text"
+                 formControlName="facebook"
+                  class="form-control"
+                  autocomplete="off">
+                
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <div class="form-group">
+                <label>Twitter</label>
+                <input
+                  type="text"
+                  formControlName="twitter"
+                  class="form-control"
+                  autocomplete="off">
+                
+              </div>
+            </div>
+          </div>
+       
+          <div>
+            <div>
+              <div class="form-group">
+                <label>Spotify</label>
+                <input
+                  type="text"
+                  formControlName="spotify"
+                  class="form-control"
+                  autocomplete="off">
+                
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-dark" type="submit" [disabled]="!artistForm.valid">Post</button>
+         
+      </form>
+    </div>
+  </div>
+  
+  

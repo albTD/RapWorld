@@ -1,0 +1,51 @@
+.maindiv{
+    padding-left: 6%;
+    padding-right: 6%;
+
+}
+
+.imgdiv{
+    background-position: center top;width:100%;height: 300px; background-image: url('http://localhost:6002/cover.jpg');border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;background-repeat: no-repeat;background-size: cover;
+}
+
+.imgcircle{
+    border-radius:100%;background-color:black;height:140px;width: 140px;border: 5px solid white;object-fit:contain;margin-left: 43%;margin-right: 43%;position: relative;top: 60%;
+}
+
+.imgphoto{
+    border-radius:100%;height:140px;width: 140px;
+}
+
+.namediv{
+    font-weight: bolder;
+    font-size: xx-large;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .card{
+    border-radius: 10px;
+   
+ }
+
+ .like:hover{
+background-color: rgba(201, 201, 201, 0.342);
+ }
+
+ .biobtn{
+background-color: white;
+border-radius: 5px;
+color: blue;
+ }
+
+ .biobtn:hover{
+background-color:rgba(201, 201, 201, 0.342) ;
+ }

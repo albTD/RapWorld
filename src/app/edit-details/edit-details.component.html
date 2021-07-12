@@ -1,0 +1,26 @@
+<div style="margin-top: 20%;padding-right: 15%;padding-left:15%;">
+    <div >
+      <form  [formGroup]="editForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            
+          <label >Edit your {{detail}}:</label>
+          <input *ngIf="detail=='number'"  type="number" id="number" class="form-control"  formControlName="number"/>
+          <span class="help-block" *ngIf="!editForm.get('number').valid">
+            <span *ngIf="editForm.get('number').errors['lengthminimum']">Enter a valid mobile no.</span>
+            <!-- <span *ngIf="editForm.get('number').errors['required']">Mobile no. is required.</span> -->
+         </span> 
+
+          <input *ngIf="detail=='address'" type="text" id="address" class="form-control"  formControlName="address"/>
+          <span class="help-block" *ngIf="!editForm.get('address').valid && editForm.get('address').touched">
+            Address is required.
+        </span> 
+
+        </div>
+
+  
+          <button class="btn btn-primary" type="submit"  [disabled]="!editForm.get(detail).valid">Edit</button> 
+  
+      </form>
+    </div>
+  </div>

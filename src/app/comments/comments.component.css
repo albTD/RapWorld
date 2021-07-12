@@ -1,0 +1,25 @@
+.imgcircle{
+    border-radius:100%;height:50px;width: 50px;object-fit:contain;margin-top: px;
+}
+
+.imgphoto{
+    border-radius:100%;height:50px;width: 50px;
+}
+
+.maindiv{
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 3%;
+}
+
+.pos{
+    margin-top: 2px;
+}
+
+
+
+
+  .anchor{
+    border-radius: 20px;
+    margin-bottom:5px;
+}

@@ -1,0 +1,60 @@
+<div  style="margin-top:5%;padding-left: 15%;padding-right: 15%;">
+    <div >
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label >Name</label>
+            <input type="text" id="name" class="form-control"  formControlName="name" />
+            <span class="help-block" *ngIf="!signupForm.get('name').valid && signupForm.get('name').touched">
+            Name is required.
+            </span> 
+          </div>
+
+          <div class="form-group">
+            <label >Username</label>
+            <input type="text" id="username" class="form-control"  formControlName="username"/>
+            <span class="help-block" *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched">
+                Userame is required.
+            </span> 
+          </div>
+
+          <div class="form-group">
+            <label >Password</label>
+            <input type="password" id="password" class="form-control"  formControlName="password"/>
+            <span class="help-block" *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched">
+              <span *ngIf="signupForm.get('password').errors['passminimum']">Minimum length must be 6</span>
+              <span *ngIf="signupForm.get('password').errors['required']">Password is required.</span>
+           </span> 
+          </div>
+
+        <div class="form-group">
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" class="form-control"  formControlName="email"/>
+          <span class="help-block" *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">Enter a valid email</span>
+        </div>
+
+        <div class="form-group">
+          <label >Mobile No.</label>
+          <input type="number" id="number" class="form-control"  formControlName="number"/>
+          <span class="help-block" *ngIf="!signupForm.get('number').valid && signupForm.get('number').touched">
+            <span *ngIf="signupForm.get('number').errors['lengthminimum']">Enter a valid mobile no.</span>
+            <span *ngIf="signupForm.get('number').errors['required']">Mobile no. is required.</span>
+         </span> 
+        </div>
+        
+
+        <div class="form-group">
+                <label for="password">Address</label>
+                <input type="text" id="address" class="form-control"  formControlName="address"/>
+                <span class="help-block" *ngIf="!signupForm.get('address').valid && signupForm.get('address').touched">
+                    Address is required.
+                </span> 
+        </div>
+        
+
+         
+          <button class="btn btn-primary" type="submit" [disabled]="!signupForm.valid">Register</button>       
+       
+        </form>
+    </div>
+  </div>

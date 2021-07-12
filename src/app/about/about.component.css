@@ -1,0 +1,19 @@
+.maindiv{
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 3%;
+}
+
+.imgcircle{
+    border-radius:100%;background-color:black;height:150px;width: 150px;border: 5px solid black;object-fit:contain;
+}
+
+.imgphoto{
+    border-radius:100%;height:140px;width: 140px;
+}
+
+.imgDiv{
+    padding-left: 40%;
+    padding-right: 40%;
+    padding-top: 5%;
+}

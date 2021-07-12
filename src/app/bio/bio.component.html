@@ -1,0 +1,16 @@
+<form #bioForm="ngForm" (ngSubmit)="onSubmit(bioForm)" style="margin-top: 10px;" *ngIf="value">
+<div class="form-group">
+
+    <textarea
+      type="text"
+      class="form-control"
+      autocomplete="off"
+      ngModel 
+      name="bio"
+      row="6" 
+
+      placeholder="write something here..."
+      required></textarea>
+  </div>
+  <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button> | <button type="submit" class="btn btn-secondary" [disabled]="!bioForm.valid">Save</button>
+</form>
