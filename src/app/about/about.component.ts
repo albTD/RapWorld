@@ -31,11 +31,11 @@ let body={
 
 console.log(body);
 
-this.http.post("http://localhost:6002/selectedArtist",body).subscribe((res)=>{
+this.http.post("https://projrap.herokuapp.com/selectedArtist",body).subscribe((res)=>{
 this.artists.push(res);
 this.name=this.artists[0].name;
 
-this.http.post("http://localhost:6002/sortTrack",{name:this.name}).subscribe((res1)=>{
+this.http.post("https://projrap.herokuapp.com/sortTrack",{name:this.name}).subscribe((res1)=>{
 this.tracks=res1;
 console.log(res1);
 })

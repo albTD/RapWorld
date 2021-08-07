@@ -37,7 +37,7 @@ comments:any=[];
        date:date.toDateString()
      }
 
-     this.http.post("http://localhost:6002/commentPost",body).subscribe((res)=>{
+     this.http.post("https://projrap.herokuapp.com/commentPost",body).subscribe((res)=>{
 console.log(res);
 this.read();
       })  
@@ -50,7 +50,7 @@ this.read();
       postid:this.id
     }
 
-    this.http.post("http://localhost:6002/commentRead",body).subscribe((res)=>{
+    this.http.post("https://projrap.herokuapp.com/commentRead",body).subscribe((res)=>{
       this.comments=res;
     })  
 

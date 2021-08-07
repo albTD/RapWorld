@@ -7,3 +7,16 @@ input.ng-invalid.ng-touched{
     padding-right: 15%;
     padding-top: 3%;
 }
+
+.toast-body{
+
+
+}
+
+.toast{
+    border-radius: 10px;
+    background-color: #EC0101;
+    color: white;
+    font-weight: bolder;
+    margin-top: 20px;
+}

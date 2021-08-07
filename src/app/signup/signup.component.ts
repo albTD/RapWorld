@@ -41,7 +41,7 @@ let body={
   address:this.signupForm.value.address
 }
 console.log(body);
-this.http.post('http://localhost:6002/signup',body).subscribe((res)=>{
+this.http.post('https://projrap.herokuapp.com/signup',body).subscribe((res)=>{
   console.log(res);
 if(res==1){
 this.router.navigate(['/login']);

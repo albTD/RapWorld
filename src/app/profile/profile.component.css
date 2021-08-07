@@ -5,7 +5,7 @@
 }
 
 .imgdiv{
-    background-position: center top;width:100%;height: 300px; background-image: url('http://localhost:6002/cover.jpg');border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;background-repeat: no-repeat;background-size: cover;
+    background-position: center top;width:100%;height: 300px; background-image: url('https://projrap.herokuapp.com/cover.jpg');border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;background-repeat: no-repeat;background-size: cover;
 }
 
 .imgcircle{
@@ -49,3 +49,12 @@ color: blue;
  .biobtn:hover{
 background-color:rgba(201, 201, 201, 0.342) ;
  }
+
+
+  .audioImg{
+height: 305px;
+  }
+
+  img{
+    height:227px;
+  }

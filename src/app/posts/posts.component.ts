@@ -21,12 +21,12 @@ this.logdetailservice.insertLog(this.username);
 
 
 console.log(this.username);
-this.http.get('http://localhost:6002/postsRead').subscribe((res)=>{
+this.http.get('https://projrap.herokuapp.com/postsRead').subscribe((res)=>{
 console.log(res);
 this.posts=res;
 })
 
-this.http.get('http://localhost:6002/userDetail').subscribe((res)=>{
+this.http.get('https://projrap.herokuapp.com/userDetail').subscribe((res)=>{
 console.log(res);
 this.users=res;
 })

@@ -48,7 +48,7 @@ let body={
 
 console.log(body);
 
-this.http.post("http://localhost:6002/artist",body).subscribe((res)=>{
+this.http.post("https://projrap.herokuapp.com/artist",body).subscribe((res)=>{
 console.log(res);
 this.artistForm.reset();
 })

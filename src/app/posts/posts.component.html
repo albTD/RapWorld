@@ -17,7 +17,8 @@
       <div class="card mb-3"  *ngFor="let post of posts">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img style="width: 100%;" src={{post.imagePath}} alt="Post Image">
+            <img style="width: 100%;" *ngIf="!post.audio" src={{post.imagePath}} alt="Post Image">
+            <img class="audioImg" style="width: 100%;" *ngIf="post.audio" src={{post.imagePath}} alt="Post Image">
           </div>
           <div class="col-md-8">
             <div class="card-body" >
@@ -39,7 +40,11 @@
                     
                     <p class="card-text"  *ngIf="post.username===user.username">{{post.description}}</p>
                     <p class="card-text" *ngIf="post.username===user.username">Link to the track:<a style="margin-left: 10px;" href={{post.videoPath}}>Click here</a></p>
-                
+                    <audio controls *ngIf="post.username===user.username && post.audio">
+                      <source src="https://projrap.herokuapp.com/{{post.audio}}" type="audio/ogg">
+                      <source src="https://projrap.herokuapp.com/{{post.audio}}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                    </audio>
                 </div>
                 <hr >
 

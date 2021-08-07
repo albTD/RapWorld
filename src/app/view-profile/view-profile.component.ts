@@ -27,12 +27,12 @@ users:any=[];
       username:this.vusername
     }
 
-    this.http.post('http://localhost:6002/currentUserPost',body).subscribe((res)=>{
+    this.http.post('https://projrap.herokuapp.com/currentUserPost',body).subscribe((res)=>{
       console.log(res);
       this.posts=res;
       })
       
-      this.http.post('http://localhost:6002/currentUserDetail',body).subscribe((res)=>{
+      this.http.post('https://projrap.herokuapp.com/currentUserDetail',body).subscribe((res)=>{
       console.log(res);
       this.users.push(res);
       })

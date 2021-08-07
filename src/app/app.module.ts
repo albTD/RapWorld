@@ -22,7 +22,7 @@ import { CommentsComponent } from './comments/comments.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditDetailsComponent } from './edit-details/edit-details.component';
 import { ViewProfileComponent } from './view-profile/view-profile.component';
-
+import * as $ from 'jquery';
 
 
 @NgModule({
@@ -53,6 +53,7 @@ import { ViewProfileComponent } from './view-profile/view-profile.component';
     Ng2OrderModule,
     NgxPaginationModule,
     BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

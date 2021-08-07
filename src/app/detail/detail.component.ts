@@ -19,7 +19,7 @@ export class DetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get("http://localhost:6002/readArtist").subscribe((res)=>{
+    this.http.get("https://projrap.herokuapp.com/readArtist").subscribe((res)=>{
 this.artists=res;
 console.log(res);
     })

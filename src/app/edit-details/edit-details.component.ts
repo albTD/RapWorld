@@ -49,14 +49,14 @@ export class EditDetailsComponent implements OnInit {
       console.log(this.editForm.value);
 if(this.detail=='number'){
 
-  this.http.post('http://localhost:6002/editDetails',{detail: this.editForm.value.number,username:this.username}).subscribe((res)=>{
+  this.http.post('https://projrap.herokuapp.com/editDetails',{detail: this.editForm.value.number,username:this.username}).subscribe((res)=>{
     console.log(res);
     this.router.navigate(['/profile',this.username]);
   })
 
 }else{
 
-  this.http.post('http://localhost:6002/editDetails',{detail: this.editForm.value.address,username:this.username}).subscribe((res)=>{
+  this.http.post('https://projrap.herokuapp.com/editDetails',{detail: this.editForm.value.address,username:this.username}).subscribe((res)=>{
     console.log(res);
     this.router.navigate(['/profile',this.username]);
   })

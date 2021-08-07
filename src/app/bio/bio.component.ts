@@ -31,7 +31,7 @@ let body={
 } 
 console.log(body);
 
-this.http.post("http://localhost:6002/bio",body,{responseType: 'text'}).subscribe((res)=>{
+this.http.post("https://projrap.herokuapp.com/bio",body,{responseType: 'text'}).subscribe((res)=>{
 console.log(res);
 form.reset();
 this.value=!this.value;

@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 import { NavigationStart, Router } from '@angular/router';
 import { LogDetailService } from '../log-detail.service';
 import { HostListener } from '@angular/core';
+declare var $ : any;
 
 @Component({
   selector: 'app-login',
@@ -45,19 +46,27 @@ let body={
 username:form.value.username,
 password:form.value.password
 }
-this.http.post("http://localhost:6002/login",body).subscribe((res)=>{
+this.http.post("https://projrap.herokuapp.com/login",body).subscribe((res)=>{
   console.log(res);
   if(res==1){
    
     this.router.navigate(['home',form.value.username])
     form.reset();
   }
-  if(res==0){
+else{
     console.log('error while log in');
+    this.toast();
   }
 
 })
 
 }
+
+toast(){
+  $(document).ready(function(){
+    $('.toast').toast('show');
+  });
+}
+
 
 }
